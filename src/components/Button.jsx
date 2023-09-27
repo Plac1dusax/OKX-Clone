@@ -14,6 +14,14 @@ export default function Button({ type, content, specialClass }) {
         </button>
       )
       break
+    case "main":
+      button = (
+        <button
+          className={`${styles["button"]} ${styles["mode-button"]} ${styles[specialClass]}`}
+        >
+          {content}
+        </button>
+      )
 
     default:
       break

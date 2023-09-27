@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "path": "/images/sponsor/sponsor-1.webp",
+    "alt": "Tribeca logo"
+  },
+  {
+    "id": 2,
+    "path": "/images/sponsor/sponsor-2.webp",
+    "alt": "McLaren F1 Team logo"
+  },
+  {
+    "id": 3,
+    "path": "/images/sponsor/sponsor-3.webp",
+    "alt": "Manchester City logo"
+  }
+]
