@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-background: #000;
+  --header-background: #121212;
+  --mode-background: hsla(0, 0%, 100%, 0.15);
+  --mode-text: rgb(250, 250, 250);
+  --mode-background-selected: #fff;
+  --mode-text-selected: rgb(0, 0, 0);
+  --mode-border-color: hsla(0, 0%, 100%, 0.25);
+  --header-split-color: rgba(255, 255, 255, 0.15);
+  --navigation-list-item-text: #fafafa;
+  --navigation-arrow: #e3e3e3;
+  --dropdown-menu-background: #fff;
+  --dropdown-item-primary-header: #000;
+  --dropdown-item-secondary-header: #929292;
+  --dropdown-menu-group-header: #929292;
+  --expandable-border: #929292;
+  --search-bar: #fafafa;
+  --login: #fafafa;
+  --sign-up: #fafafa;
+  --option-button: #fafafa;
+  --separate-list-header: #6e6e6e;
+  --download-app-header: #000;
+  --notification-header: #000;
+  --notification-date: #929292;
+  --notification-hover: #004cff;
+  --more-announcements: #004cff;
+  --contact-list-item: #000;
+  --search-input-background: hsla(0, 0%, 100%, 0.06);
+  --search-input-placeholder: #6c6c6c;
+  --search-input-color: #ccc;
+  --search-input-focus: #ccc;
+  --hamburger-menu-color: #fafafa;
+  --side-menu-background: #121212;
+  --side-menu-close: #909090;
+  --mode-button-background: rgb(36, 36, 36);
+  --mode-button-text: #fafafa;
+  --menu-item-header: #fafafa;
+  --menu-item-text: #fafafa;
+}
+
+body {
+  margin: 0;
+
+  overflow: hidden;
+  overflow-y: auto;
+}

@@ -1,0 +1,21 @@
+.notification-container {
+  padding: 12px 20px;
+
+  text-decoration: none;
+}
+
+.header {
+  color: var(--notification-header);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.date {
+  color: var(--notification-date);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.notification-container:hover .header {
+  color: var(--notification-hover);
+}
