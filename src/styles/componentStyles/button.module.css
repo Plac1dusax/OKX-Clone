@@ -28,3 +28,19 @@
 .button-exchange {
   border: 1px solid #fafafa;
 }
+
+.main-button {
+  max-width: 37%;
+  margin-left: 24px;
+
+  font-size: 20px;
+
+  padding: 23px 44px;
+
+  white-space: nowrap;
+
+  text-align: center;
+
+  background-color: #fff;
+  color: #000;
+}
