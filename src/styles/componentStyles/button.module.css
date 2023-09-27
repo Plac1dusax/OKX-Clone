@@ -1,0 +1,30 @@
+.button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.mode-button {
+  width: 154px;
+  height: 36px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 10px 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--mode-button-background);
+  color: var(--mode-button-text);
+
+  cursor: pointer;
+}
+
+.button-exchange {
+  border: 1px solid #fafafa;
+}

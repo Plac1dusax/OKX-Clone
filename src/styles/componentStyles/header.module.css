@@ -1,0 +1,301 @@
+.header-container {
+  width: 100%;
+  height: 48px;
+
+  background-color: var(--header-background);
+
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+.navigation-section {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+
+.company-logo-and-mode {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 243.562px;
+  height: 48px;
+}
+
+.company-logo {
+  position: relative;
+
+  width: 82px;
+  height: 32px;
+
+  margin-right: 5px;
+}
+
+.company_logo_link {
+  position: relative;
+}
+
+.mode-buttons {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mode-button {
+  background-color: var(--mode-background);
+  color: var(--mode-text);
+  font-size: 12px;
+  padding: 5px 12px;
+  text-decoration: none;
+
+  width: auto;
+
+  border: 1px solid var(--mode-border-color);
+  border-radius: 3px;
+}
+
+.active {
+  background-color: var(--mode-background-selected);
+  color: var(--mode-text-selected);
+}
+
+.exchange:not(.active) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.wallet:not(.active) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.header-split,
+.header-split-right {
+  width: 1px;
+  height: 16px;
+
+  margin: 16px 10px 16px 20px;
+
+  background: var(--header-split-color);
+}
+
+.header-split-right {
+  margin: 16px 20px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  color: var(--search-bar);
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.search svg {
+  width: 20px;
+  height: 20px;
+}
+
+.login,
+.sign-up {
+  font-size: 14px;
+}
+
+.login-section {
+  width: 127px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login {
+  color: var(--login);
+  text-decoration: none;
+}
+
+.sign-up {
+  color: var(--sign-up);
+  border: 1px solid var(--sign-up);
+  border-radius: 14px;
+  height: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  padding: 6px 8px;
+}
+
+.options {
+  position: relative;
+
+  width: 148px;
+
+  list-style: none;
+
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0;
+
+  color: var(--option-button);
+}
+
+.option {
+  width: 20px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  margin-right: 10px;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.option-dropdown-container {
+  pointer-events: none;
+  opacity: 0;
+  bottom: -30px;
+
+  transition: bottom 100ms, opacity 300ms;
+}
+
+.option:hover .option-dropdown-container {
+  opacity: 1;
+  bottom: 0;
+  pointer-events: auto;
+}
+
+.search-input {
+  width: 210px;
+  height: 32px;
+
+  position: relative;
+
+  margin-right: 6px;
+  padding-right: 10px;
+
+  color: var(--search-input-color);
+}
+
+.search-input input::placeholder {
+  color: var(--search-input-placeholder);
+}
+
+.search-input input {
+  background-color: var(--search-input-background);
+  border: none;
+  outline: 1px solid transparent;
+
+  border-radius: 4px;
+  color: var(--search-input-color);
+
+  padding-left: 40px;
+  transition: outline 200ms;
+}
+
+.search-input input:focus {
+  outline: 1px solid var(--search-input-focus);
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--search-input-placeholder);
+}
+
+.search-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger-menu {
+  width: 20px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  display: none;
+
+  color: var(--hamburger-menu-color);
+}
+
+.hamburger-menu svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media all and (min-width: 1600px) {
+  .search {
+    display: none;
+  }
+
+  .search-input {
+    display: inline-flex;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .hamburger-menu {
+    display: inline-flex;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .login-section {
+    display: none;
+  }
+
+  .header-split-right {
+    display: none;
+  }
+
+  .options {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1599px) {
+  .search-input {
+    display: none;
+  }
+}

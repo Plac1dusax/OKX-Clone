@@ -1,0 +1,237 @@
+.dropdown-menu-wrapper,
+.expandable-active,
+.dropdown-menu-wrapper-expanded {
+  position: absolute;
+
+  min-width: 235px;
+  max-width: 400px;
+
+  width: fit-content;
+
+  left: -2px;
+  top: 48px;
+
+  z-index: 10000;
+
+  background-color: var(--dropdown-menu-background);
+  border-radius: 6px;
+
+  padding: 12px;
+
+  padding-right: 0;
+}
+
+.list-header {
+  padding: 6px 8px;
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: var(--dropdown-menu-group-header);
+}
+
+.dropdown-menu-wrapper-expanded {
+  position: absolute;
+
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  width: 274px;
+
+  border-left: 1px solid var(--expandable-border);
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.expandable-active:hover {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  transition: border-radius 150ms;
+}
+
+.grouped-content-list {
+  border-bottom: 1px solid var(--expandable-border);
+}
+
+.grouped-content-list:last-child {
+  border-bottom: none;
+}
+
+.separate-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.separate-list-item:last-child {
+  padding-right: 20px;
+}
+
+.separate-list {
+  display: flex;
+  align-items: center;
+
+  max-width: 430px;
+
+  gap: 14px;
+}
+
+.separate-list-header {
+  font-size: 12px;
+  font-weight: 500;
+
+  padding-left: 12px;
+
+  color: var(--separate-list-header);
+}
+
+.option-dropdown {
+  top: 48px;
+}
+
+.dropdown-menu-barcode {
+  min-width: 172px;
+  width: 172px;
+  height: 225px;
+  left: -86px;
+
+  padding: 4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+.barcode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+}
+
+.barcode-header {
+  font-size: 14px;
+  font-weight: 600;
+  font-size: 12px;
+
+  margin-bottom: 6px;
+
+  color: var(--download-app-header);
+}
+
+.barcode-wrapper {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+}
+
+.options-and-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 8px;
+
+  height: 100%;
+}
+
+.more-options-button {
+  width: 87.5px;
+  height: 23.6px;
+
+  background-color: #fff;
+  border: 0.5px solid #dbdbdb;
+  border-radius: 14px;
+  color: #000;
+  padding: 3px 14px;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+.description {
+  color: #929292;
+  font-size: 12px;
+}
+
+.dropdown-menu-notifications {
+  width: 336px;
+
+  left: -224px;
+}
+
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.more-announcements {
+  color: var(--more-announcements);
+  font-size: 12px;
+  font-weight: 500;
+
+  padding: 12px 18px;
+}
+
+.dropdown-menu-contact {
+  min-width: 172px;
+  width: 172px;
+  height: 240px;
+
+  left: -101.8px;
+
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-list-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--contact-list-item);
+
+  white-space: nowrap;
+
+  padding: 12px 16px;
+}
+
+.contact-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.icon-wrapper {
+  font-weight: 400;
+  font-size: 16px;
+}
