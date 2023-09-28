@@ -7,6 +7,7 @@ import sponsor from "../data/sponsor.json"
 import AppAdvertisement from "@/components/AppAdvertisement"
 import { v4 as uuidv4 } from "uuid"
 import Question from "@/components/Question"
+import CustomSelectBox from "@/components/CustomSelectBox"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
@@ -375,6 +376,23 @@ export default function Home() {
           })}
         </div>
       </div>
+      <footer className={`${styles["section"]} ${styles["footer-section"]}`}>
+        <div className={styles["footer-content"]}>
+          <div className={styles["company-logo-wrapper"]}>
+            <div className={styles["company-logo"]}>
+              <Image
+                src={"/images/companyLogos/okx-logo-nav.png"}
+                fill
+                alt="OKX company logo"
+              />
+            </div>
+            <div className={styles["date"]}>©2023 OKX.COM</div>
+          </div>
+          <div className={styles["select-box-container"]}>
+            <CustomSelectBox />
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
