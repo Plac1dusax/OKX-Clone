@@ -1,0 +1,29 @@
+.footer-list-header {
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.margin {
+  margin-top: 40px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 16px;
+
+  height: 16px;
+}
+
+.footer-list a {
+  text-decoration: 0;
+
+  color: #909090;
+
+  font-size: 14px;
+  font-weight: 400;
+}
