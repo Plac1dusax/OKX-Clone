@@ -1,0 +1,53 @@
+.app-advertisement-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 100px;
+}
+
+.application-images {
+  width: 280px;
+  min-height: 597px;
+  height: fit-content;
+
+  position: relative;
+}
+
+.application-information {
+  width: 41%;
+
+  max-width: 486px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.application-section-buttons {
+  display: flex;
+
+  width: 100%;
+  height: 65px;
+  border-radius: 100px;
+  padding: 4px;
+
+  border: 1px solid #fff;
+
+  position: relative;
+}
+
+.application-description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+
+  width: 100%;
+
+  color: #fff;
+}

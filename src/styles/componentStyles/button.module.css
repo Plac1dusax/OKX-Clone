@@ -2,6 +2,8 @@
   background: none;
   outline: none;
   border: none;
+
+  cursor: pointer;
 }
 
 .mode-button {
@@ -29,11 +31,16 @@
   border: 1px solid #fafafa;
 }
 
-.main-button {
+.main-button,
+.about-button {
   max-width: 37%;
   margin-left: 24px;
 
+  height: 40px;
+  border-radius: 30px;
+
   font-size: 20px;
+  font-weight: 500;
 
   padding: 23px 44px;
 
@@ -42,5 +49,41 @@
   text-align: center;
 
   background-color: #fff;
+
+  border: 1.5px solid #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   color: #000;
+}
+
+.application-button {
+  width: 33.3%;
+  height: 100%;
+
+  color: #000;
+  cursor: pointer;
+
+  background-color: none;
+  color: #fff;
+
+  border-radius: 30px;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 16px;
+
+  padding: 20px 10px;
+}
+
+.selected-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.about-button {
+  margin-left: 0;
 }
