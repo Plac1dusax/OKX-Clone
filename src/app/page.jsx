@@ -4,6 +4,7 @@ import Header from "@/components/Header"
 import SectionHeader from "@/components/SectionHeader"
 import Button from "@/components/Button"
 import sponsor from "../data/sponsor.json"
+import AppAdvertisement from "@/components/AppAdvertisement"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
@@ -90,6 +91,99 @@ export default function Home() {
             src={"/videos/trade-section.mp4"}
             className={styles["trade-video"]}
           />
+        </div>
+      </div>
+      <div
+        className={`${styles["section"]} ${styles["mobile-application-section"]}`}
+      >
+        <AppAdvertisement />
+      </div>
+      <div className={`${styles["section"]} ${styles["evolution-section"]}`}>
+        <SectionHeader
+          header={"With you every step of the way"}
+          thinner={true}
+        />
+        <p className={styles["description-evolution"]}>
+          From your first crypto trade to your first NFT purchase, you'll have
+          us to guide you through the process. No stupid questions. No sleepless
+          nights. Have confidence in your crypto.
+        </p>
+        <div className={styles["trade-section-video"]}>
+          <video
+            autoPlay
+            loop
+            muted
+            src={"/videos/evolution.webm"}
+            className={styles["trade-video"]}
+          />
+        </div>
+      </div>
+      <div className={`${styles["section"]} ${styles["about-section"]}`}>
+        <div className={styles["about-section-text-content"]}>
+          <div className={styles["about-section-headers"]}>
+            <SectionHeader header={"What is OKX?"} thinner={true} />
+            <p className={styles["about-description"]}>
+              Find out why we’re your new favorite crypto app with some help
+              from our world-class partners
+            </p>
+          </div>
+          <div className={styles["about-button-and-logo"]}>
+            <Button
+              type={"about-section"}
+              content={"Find out"}
+              specialClass={"about-section-button"}
+            />
+            <div className={styles["company-logo-wide-wrapper"]}>
+              <Image
+                src={"/images/companyLogos/company-logo-wide.webp"}
+                fill
+                alt="OKX company logo"
+              />
+            </div>
+          </div>
+        </div>
+        <div className={styles["about-section-video-content"]}>
+          <div className={styles["video-container"]}>
+            <div className={styles["video-information"]}>
+              <p className={styles["main"]}>Coach Pep Guardiola</p>
+              <p className={styles["secondary"]}>
+                Explains "crazy football formation"
+              </p>
+            </div>
+            <video
+              className={styles["about-video"]}
+              autoPlay={false}
+              controls
+              playsInline
+              src={"/videos/about-video-1.mp4"}
+            />
+          </div>
+          <div className={styles["video-container"]}>
+            <div className={styles["video-information"]}>
+              <p className={styles["main"]}>F1 driver Daniel Ricciardo</p>
+              <p className={styles["secondary"]}>Asks if OKX is a race car</p>
+            </div>
+            <video
+              className={styles["about-video"]}
+              autoPlay={false}
+              controls
+              playsInline
+              src={"/videos/about-video-2.mp4"}
+            />
+          </div>
+          <div className={styles["video-container"]}>
+            <div className={styles["video-information"]}>
+              <p className={styles["main"]}>Snowboarder Scotty James</p>
+              <p className={styles["secondary"]}>Brings in the whole family</p>
+            </div>
+            <video
+              className={styles["about-video"]}
+              autoPlay={false}
+              controls
+              playsInline
+              src={"/videos/about-video-3.mp4"}
+            />
+          </div>
         </div>
       </div>
     </div>

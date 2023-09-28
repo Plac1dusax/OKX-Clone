@@ -13,6 +13,49 @@ import { GiHamburgerMenu } from "react-icons/gi"
 import SideMenu from "./SideMenu"
 import { BiAbacus } from "react-icons/bi"
 import { v4 as uuidv4 } from "uuid"
+import { AiOutlineCreditCard } from "react-icons/ai"
+import { FaPeopleArrows } from "react-icons/fa"
+import { AiTwotoneBank } from "react-icons/ai"
+import { LuMonitorPause } from "react-icons/lu"
+import { BiSolidMedal } from "react-icons/bi"
+import { FaMoneyBillWaveAlt } from "react-icons/fa"
+import { SiConvertio } from "react-icons/si"
+import { TbBusinessplan } from "react-icons/tb"
+import { BsCurrencyExchange } from "react-icons/bs"
+import { LiaRobotSolid } from "react-icons/lia"
+import { SiCoinmarketcap } from "react-icons/si"
+import { SiFuturelearn } from "react-icons/si"
+import { FaHandHolding } from "react-icons/fa"
+import { BsFillRocketTakeoffFill } from "react-icons/bs"
+import { GiWorld } from "react-icons/gi"
+import { GiCrossedChains } from "react-icons/gi"
+import { CgPerformance } from "react-icons/cg"
+import { FaLaptopCode } from "react-icons/fa"
+import { SiVisualstudiocode } from "react-icons/si"
+import { PiFileCode } from "react-icons/pi"
+import { FaFaucet } from "react-icons/fa"
+import { BsGithub } from "react-icons/bs"
+import { SiHackaday } from "react-icons/si"
+import { IoMdApps } from "react-icons/io"
+import { BiTransfer } from "react-icons/bi"
+import { PiSwapFill } from "react-icons/pi"
+import { BiCoinStack } from "react-icons/bi"
+import { BsSafe2Fill } from "react-icons/bs"
+import { SiOracle } from "react-icons/si"
+import { FaGasPump } from "react-icons/fa"
+import { BsGraphUp } from "react-icons/bs"
+import { FaUserTie } from "react-icons/fa"
+import { GrChannel } from "react-icons/gr"
+import { ImHome } from "react-icons/im"
+import { TbMobiledata } from "react-icons/tb"
+import { RiVipCrownFill } from "react-icons/ri"
+import { FaMoneyCheckAlt } from "react-icons/fa"
+import { MdAccountTree } from "react-icons/md"
+import { MdPool } from "react-icons/md"
+import { AiTwotoneSecurityScan } from "react-icons/ai"
+import { GrStatusGood } from "react-icons/gr"
+import { VscReferences } from "react-icons/vsc"
+import { GrOverview } from "react-icons/gr"
 import styles from "../styles/componentStyles/header.module.css"
 
 export default function Header() {
@@ -24,17 +67,17 @@ export default function Header() {
       header: "Buy crypto",
       dropdownContent: [
         {
-          icon: <BiAbacus />,
+          icon: <AiOutlineCreditCard />,
           primaryHeader: "Express buy",
           secondaryHeader: "Visa, Mastercard and others",
         },
         {
-          icon: <BiAbacus />,
+          icon: <FaPeopleArrows />,
           primaryHeader: "P2P trading",
           secondaryHeader: "Buy/Sell with 0 fees via 100+ payment methods",
         },
         {
-          icon: <BiAbacus />,
+          icon: <AiTwotoneBank />,
           primaryHeader: "Third-party payment",
           secondaryHeader: "Banxa, Simplex and others",
         },
@@ -45,19 +88,19 @@ export default function Header() {
       header: "Discover",
       dropdownContent: [
         {
-          icon: <BiAbacus />,
+          icon: <LuMonitorPause />,
 
           primaryHeader: "Markets",
           secondaryHeader: "View the latest crypto prices, volume, and data",
         },
         {
-          icon: <BiAbacus />,
+          icon: <BiSolidMedal />,
 
           primaryHeader: "Opportunities",
           secondaryHeader: "Discover hot and new crypto",
         },
         {
-          icon: <BiAbacus />,
+          icon: <FaMoneyBillWaveAlt />,
 
           primaryHeader: "Copy trading",
           secondaryHeader: "Reap high returns with a community of top traders",
@@ -69,20 +112,20 @@ export default function Header() {
       header: "Trade",
       dropdownContent: [
         {
-          icon: <BiAbacus />,
+          icon: <SiConvertio />,
 
           primaryHeader: "Convert",
           secondaryHeader: "Quick conversion, zero fees, no slippage",
         },
         {
-          icon: <BiAbacus />,
+          icon: <TbBusinessplan />,
 
           primaryHeader: "Basic trading",
           secondaryHeader: "Crypto trading made easy",
           list: ["Spot", "Simple options"],
         },
         {
-          icon: <BiAbacus />,
+          icon: <BsCurrencyExchange />,
 
           primaryHeader: "Delivering & margin trading",
           secondaryHeader:
@@ -90,20 +133,19 @@ export default function Header() {
           list: ["Perpetual swaps", "Futures", "Margin", "Options"],
         },
         {
-          icon: <BiAbacus />,
+          icon: <LiaRobotSolid />,
 
           primaryHeader: "Trading bots",
           secondaryHeader: "Multiple strategies to help you trade with ease",
           list: ["Marketplace", "Create a bot"],
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <FaMoneyBillWaveAlt />,
           primaryHeader: "Copy trading",
           secondaryHeader: "Reap high returns with a community of top traders",
         },
         {
-          icon: <BiAbacus />,
+          icon: <SiCoinmarketcap />,
 
           primaryHeader: "Liquid Marketplace",
           secondaryHeader:
@@ -116,21 +158,20 @@ export default function Header() {
       header: "Grow",
       dropdownContent: [
         {
-          icon: <BiAbacus />,
+          icon: <SiFuturelearn />,
 
           primaryHeader: "Earn",
           secondaryHeader: "Don't just HODL earn",
           list: ["Simple earn", "Structured products", "On-chain earn"],
         },
         {
-          icon: <BiAbacus />,
+          icon: <FaHandHolding />,
 
           primaryHeader: "Loan",
           secondaryHeader: "Borrow to earn, borrow to spend",
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <BsFillRocketTakeoffFill />,
           primaryHeader: "Jumpstart",
           secondaryHeader:
             "Discover new, high-quality projects around the world",
@@ -146,54 +187,46 @@ export default function Header() {
           commonGroupHeader: "OKB Chain",
           groupItems: [
             {
-              icon: <BiAbacus />,
-
+              icon: <GiWorld />,
               primaryHeader: "Explore",
               secondaryHeader: "Enter the world of Web3",
               isExpandable: true,
               expandableContent: [
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <GiCrossedChains />,
                   primaryHeader: "OKB Chain",
                   secondaryHeader: "Unleash the power of Web3",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <CgPerformance />,
                   primaryHeader: "Testnet Explorer",
                   secondaryHeader: "Explore testnet on-chain data",
                 },
               ],
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <FaLaptopCode />,
               primaryHeader: "Developers",
               secondaryHeader: "Expand without limits",
               isExpandable: true,
               expandableContent: [
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <SiVisualstudiocode />,
                   primaryHeader: "Developer Home",
                   secondaryHeader: "Build on OKBC",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <PiFileCode />,
                   primaryHeader: "Developer docs",
                   secondaryHeader: "Explore our protocol documents",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <FaFaucet />,
                   primaryHeader: "Testnet faucet",
                   secondaryHeader: "Get OKB on testnet",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <BsGithub />,
                   primaryHeader: "GitHub",
                   secondaryHeader: "Explore OKB Chain repositories",
                 },
@@ -205,132 +238,113 @@ export default function Header() {
           commonGroupHeader: "OKT Chain",
           groupItems: [
             {
-              icon: <BiAbacus />,
-
+              icon: <GiWorld />,
               primaryHeader: "Explore",
               secondaryHeader: "EVM & IBC compatible network",
               isExpandable: true,
               expandableContent: [
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <GiCrossedChains />,
                   primaryHeader: "OKT Chain",
                   secondaryHeader: "Decentralized layer 1 network",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <SiHackaday />,
                   primaryHeader: "OKX hackathon",
                   secondaryHeader: "Code your way to win",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <CgPerformance />,
                   primaryHeader: "Mainnet explorer",
                   secondaryHeader: "Explore mainnet on-chain data",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <CgPerformance />,
                   primaryHeader: "Testnet explorer",
                   secondaryHeader: "Explore testnet on-chain data",
                 },
               ],
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <IoMdApps />,
               primaryHeader: "Official DApps",
               secondaryHeader: "Infrastructure products",
               isExpandable: true,
               expandableContent: [
                 {
-                  icon: <BiAbacus />,
+                  icon: <BiTransfer />,
 
                   primaryHeader: "IBC Transfer",
                   secondaryHeader: "Transfer across Cosmos",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <PiSwapFill />,
                   primaryHeader: "Swap",
                   secondaryHeader: "Swap tokens on OKT Chain",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <BiCoinStack />,
                   primaryHeader: "Liquid Stacking",
                   secondaryHeader: "Stake OKT to get stOKT",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <BsSafe2Fill />,
                   primaryHeader: "Multisig safe",
                   secondaryHeader: "Multisig safe or digital assets",
                 },
               ],
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <FaLaptopCode />,
               primaryHeader: "Developers",
               secondaryHeader: "Build the future",
               isExpandable: true,
               expandableContent: [
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <SiOracle />,
                   primaryHeader: "Oracle",
                   secondaryHeader: "Get price data",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <FaGasPump />,
                   primaryHeader: "Gas back",
                   secondaryHeader: "Get gas back in OKT",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <BsGraphUp />,
                   primaryHeader: "Subgraph",
                   secondaryHeader: "Index & query on-chain data",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <BsGithub />,
                   primaryHeader: "GitHub",
                   secondaryHeader: "Explore OKT Chain repositories",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <FaFaucet />,
                   primaryHeader: "Testnet faucet",
                   secondaryHeader: "Get OKT on testnet",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <PiFileCode />,
                   primaryHeader: "Developer docs",
                   secondaryHeader: "Explore our protocol document",
                 },
               ],
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <FaUserTie />,
               primaryHeader: "User community",
               secondaryHeader: "Embrace the journey",
               isExpandable: true,
               expandableContent: [
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <GrChannel />,
                   primaryHeader: "Galxe channel",
                   secondaryHeader: "Premier Web3 data network",
                 },
                 {
-                  icon: <BiAbacus />,
-
+                  icon: <GrChannel />,
                   primaryHeader: "QuestN channel",
                   secondaryHeader: "Bridging Web3 users",
                 },
@@ -345,48 +359,41 @@ export default function Header() {
       header: "Institutional",
       dropdownContent: [
         {
-          icon: <BiAbacus />,
-
+          icon: <ImHome />,
           primaryHeader: "Institutional home",
           secondaryHeader:
             "The world’s most powerful suite of crypto trading solutions",
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <SiCoinmarketcap />,
           primaryHeader: "Liquid Marketplace",
           secondaryHeader:
             "OTC liquidity network for pro and institutional traders",
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <TbMobiledata />,
           primaryHeader: "APIs",
           secondaryHeader: "Seamless and ultra-low latency API connectivity​",
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <RiVipCrownFill />,
           primaryHeader: "VIP Loan",
           secondaryHeader: "Improve capital efficiency and lower risk​",
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <FaMoneyCheckAlt />,
           primaryHeader: "Broker Program",
           secondaryHeader:
             "Access world-class market depth with high commissions​",
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <MdAccountTree />,
           primaryHeader: "Managed Trading Sub-accounts",
           secondaryHeader:
             "Manage sub-accounts, trade easily and safely with more profits​",
         },
         {
-          icon: <BiAbacus />,
-
+          icon: <SiCoinmarketcap />,
           primaryHeader: "Historical market data",
           secondaryHeader:
             "Candlesticks, aggregate trades, order book data and more",
@@ -408,28 +415,23 @@ export default function Header() {
           listHeader: "Products",
           items: [
             {
-              icon: <BiAbacus />,
-
+              icon: <MdPool />,
               primaryHeader: "Pool",
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <FaMoneyBillWaveAlt />,
               primaryHeader: "OKB",
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <AiTwotoneSecurityScan />,
               primaryHeader: "Security of funds",
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <GrStatusGood />,
               primaryHeader: "Status",
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <BiCoinStack />,
               primaryHeader: "Proof of reserves",
             },
           ],
@@ -438,28 +440,23 @@ export default function Header() {
           listHeader: "Others",
           items: [
             {
-              icon: <BiAbacus />,
-
+              icon: <VscReferences />,
               primaryHeader: "Referral",
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <GiCrossedChains />,
               primaryHeader: "Affiliates",
             },
             {
               icon: <BiAbacus />,
-
               primaryHeader: "OKX Ventures",
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <GiCrossedChains />,
               primaryHeader: "Blockchain Explorer",
             },
             {
-              icon: <BiAbacus />,
-
+              icon: <GrOverview />,
               primaryHeader: "Trade on TradingView",
             },
           ],
