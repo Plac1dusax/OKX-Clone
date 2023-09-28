@@ -59,6 +59,15 @@ export default function Button(props) {
         </button>
       )
       break
+    case "register-section":
+      button = (
+        <button
+          className={`${styles["button"]} ${styles["register-button"]} ${styles[specialClass]}`}
+        >
+          {content}
+        </button>
+      )
+      break
   }
 
   return button

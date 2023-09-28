@@ -8,6 +8,16 @@ import AppAdvertisement from "@/components/AppAdvertisement"
 import { v4 as uuidv4 } from "uuid"
 import Question from "@/components/Question"
 import CustomSelectBox from "@/components/CustomSelectBox"
+import FooterList from "@/components/FooterList"
+import { RiTwitterXFill } from "react-icons/ri"
+import { FaTiktok } from "react-icons/fa"
+import { FaInstagram } from "react-icons/fa"
+import { FaDiscord } from "react-icons/fa"
+import { BiLogoTelegram } from "react-icons/bi"
+import { ImFacebook2 } from "react-icons/im"
+import { BsLinkedin } from "react-icons/bs"
+import { FaYoutube } from "react-icons/fa"
+import { BsThreeDots } from "react-icons/bs"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
@@ -184,6 +194,104 @@ export default function Home() {
       ),
     },
   ]
+
+  const aboutOKXFooter = {
+    header: "More about OKX",
+    listArray: [
+      "About us",
+      "Careers",
+      "Contact us",
+      "Terms of service",
+      "Privacy policy",
+      "Disclosures",
+      "Whistleblower notice",
+      "Law enforcement",
+      "OKX app",
+    ],
+  }
+
+  const productsFooter = {
+    header: "Products",
+    listArray: [
+      "Buy crypto",
+      "P2P trading",
+      "Convert",
+      "Trade",
+      "Earn",
+      "OKTC",
+      "OKX Wallet",
+      "Web3 Marketplace",
+      "Crypto calculator",
+      "Trading bots",
+      "All cryptocurrencies",
+      "Learn",
+      "TradingView",
+    ],
+  }
+
+  const servicesFooter = {
+    header: "Services",
+    listArray: [
+      "Affiliate",
+      "V5 API",
+      "Historical market data",
+      "Fee schedule",
+      "Listing application",
+      "P2P Advertiser application",
+    ],
+  }
+
+  const supportFooter = {
+    header: "Support",
+    listArray: [
+      "Support center",
+      "Channel verification",
+      "Announcements",
+      "Connect with OKX",
+    ],
+  }
+
+  const buyCryptoFooter = {
+    header: "Buy crypto",
+    listArray: [
+      "Buy USDT",
+      "Buy Bitcoin",
+      "Buy Ethereum",
+      "Buy ADA",
+      "Buy Solana",
+      "Buy MATIC",
+      "Buy Litecoin",
+      "Buy XRP",
+    ],
+  }
+
+  const cryptoCalculatorFooter = {
+    header: "Crypto calculator",
+    listArray: [
+      "BTC to USD",
+      "ETH to USD",
+      "USDT to USD",
+      "SOL to USD",
+      "XRP to USD",
+    ],
+  }
+
+  const tradeFooter = {
+    header: "Trade",
+    listArray: [
+      "BTC USDT",
+      "ETH USDT",
+      "MATIC USDT",
+      "LTC USDT",
+      "SOL USDT",
+      "XRP USDT",
+      "Bitcoin price",
+      "Ethereum price",
+      "Cardano price",
+      "Solana price",
+      "XRP price",
+    ],
+  }
 
   return (
     <div className={styles["homepage-container"]}>
@@ -390,6 +498,108 @@ export default function Home() {
           </div>
           <div className={styles["select-box-container"]}>
             <CustomSelectBox />
+          </div>
+          <div className={styles["footer-lists-container"]}>
+            <div className={styles["lists-container"]}>
+              <div className={styles["footer-list"]}>
+                <FooterList
+                  header={aboutOKXFooter.header}
+                  listArray={aboutOKXFooter.listArray}
+                />
+              </div>
+              <div className={styles["footer-list"]}>
+                <FooterList
+                  header={productsFooter.header}
+                  listArray={productsFooter.listArray}
+                />
+              </div>
+              <div
+                className={`${styles["footer-list"]} ${styles["footer-list-double"]}`}
+              >
+                <FooterList
+                  header={servicesFooter.header}
+                  listArray={servicesFooter.listArray}
+                />
+                <FooterList
+                  header={supportFooter.header}
+                  listArray={supportFooter.listArray}
+                  margin={true}
+                />
+              </div>
+              <div
+                className={`${styles["footer-list"]} ${styles["footer-list-double"]}`}
+              >
+                <FooterList
+                  header={buyCryptoFooter.header}
+                  listArray={buyCryptoFooter.listArray}
+                />
+                <FooterList
+                  header={cryptoCalculatorFooter.header}
+                  listArray={cryptoCalculatorFooter.listArray}
+                  margin={true}
+                />
+              </div>
+              <div className={styles["footer-list"]}>
+                <FooterList
+                  header={tradeFooter.header}
+                  listArray={tradeFooter.listArray}
+                />
+              </div>
+            </div>
+            <div className={styles["register"]}>
+              <div className={styles["register-title"]}>
+                Trade on the go with OKX
+              </div>
+              <Button
+                type={"register-section"}
+                content={"Register"}
+                specialClass={"button-register"}
+              />
+              <div className={styles["barcode-wrapper"]}>
+                <div className={styles["barcode"]}>
+                  <Image
+                    src={"/images/barcode/barcode.png"}
+                    alt="Register barcode"
+                    fill
+                  />
+                </div>
+                <div className={styles["barcode-description"]}>
+                  Scan to download OKX app
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles["community"]}>
+            <div className={styles["community-header"]}>Community</div>
+            <div className={styles["social-media-icons"]}>
+              <div className={styles["social-media-icon"]}>
+                <RiTwitterXFill />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <FaTiktok />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <FaInstagram />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <FaDiscord />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <BiLogoTelegram />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <ImFacebook2 />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <BsLinkedin />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <FaYoutube />
+              </div>
+              <div className={styles["social-media-icon"]}>
+                <BsThreeDots />
+              </div>
+            </div>
           </div>
         </div>
       </footer>
