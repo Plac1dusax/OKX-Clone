@@ -323,9 +323,10 @@ export default function Home() {
               />
             </div>
             <div className={styles["sponsor"]}>
-              {sponsor.map((logo) => {
+              {sponsor.map((logo, index) => {
                 return (
                   <div
+                    key={index}
                     className={`${styles["sponsor-logo-container"]} ${
                       styles[`logo-${logo.id}`]
                     }`}
@@ -346,9 +347,10 @@ export default function Home() {
             />
           </div>
           <div className={styles["sponsor-mobile"]}>
-            {sponsor.map((logo) => {
+            {sponsor.map((logo, index) => {
               return (
                 <div
+                  key={index}
                   className={`${styles["sponsor-mobile-logo-container"]} ${
                     styles[`logo-mobile-${logo.id}`]
                   }`}

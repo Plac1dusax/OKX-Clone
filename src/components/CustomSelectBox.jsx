@@ -43,6 +43,7 @@ export default function CustomSelectBox() {
       const divCenter = rect.top + rect.height / 2
 
       setCheckViewPort(divCenter < windowHeight / 2)
+      console.log(divCenter < windowHeight / 2)
     }
   }
 
