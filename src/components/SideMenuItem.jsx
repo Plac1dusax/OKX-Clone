@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { IoIosArrowDown } from "react-icons/io"
+import { LocalesContext } from "@/context/LocalesContext"
 import styles from "../styles/componentStyles/sideMenuItem.module.css"
 
 export default function SideMenuItem(props) {
@@ -15,6 +16,9 @@ export default function SideMenuItem(props) {
   const [oKTList, setOKTList] = useState(false)
   const [moreList, setMoreList] = useState(false)
   const [supportList, setSupportList] = useState(false)
+
+  const { selectedLanguage, selectedCurrency, setModalOpen } =
+    useContext(LocalesContext)
 
   let menuItem
 
@@ -56,6 +60,10 @@ export default function SideMenuItem(props) {
 
   function handleSupportListClick() {
     setSupportList(!supportList)
+  }
+
+  function handleLocalesModal() {
+    setModalOpen(true)
   }
 
   switch (header.toLowerCase()) {
@@ -368,10 +376,11 @@ export default function SideMenuItem(props) {
     case "english/usd":
       menuItem = (
         <li
+          onClick={handleLocalesModal}
           className={`${styles["menu-item"]} ${styles["menu-item-visible"]} ${styles["language-list"]}`}
         >
           <div className={styles["menu-item-header"]}>
-            <div>{header}</div>
+            <div>{`${selectedLanguage}/${selectedCurrency}`}</div>
           </div>
         </li>
       )
