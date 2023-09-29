@@ -2,6 +2,7 @@
 
 import React, { useContext } from "react"
 import { LocalesContext } from "@/context/LocalesContext"
+import { BsCheckLg } from "react-icons/bs"
 import styles from "../styles/componentStyles/localesGridItem.module.css"
 
 export default function LocalesGridItem(props) {
@@ -42,6 +43,13 @@ export default function LocalesGridItem(props) {
       }`}
     >
       {content}
+      <span className={styles["check"]}>
+        {section === "language" && content === selectedLanguage ? (
+          <BsCheckLg />
+        ) : section === "local-currency" && content === selectedCurrency ? (
+          <BsCheckLg />
+        ) : null}
+      </span>
     </div>
   )
 }

@@ -1,6 +1,4 @@
-"use client"
-
-import React, { useContext } from "react"
+import React from "react"
 import Image from "next/image"
 import Header from "@/components/Header"
 import SectionHeader from "@/components/SectionHeader"
@@ -27,8 +25,6 @@ import { LocalesContext } from "@/context/LocalesContext"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
-  const { modalOpen, setModalOpen } = useContext(LocalesContext)
-
   const fAQ = [
     {
       id: uuidv4(),
@@ -694,7 +690,7 @@ export default function Home() {
           <DownloadAppNotification />
         </div>
       </div>
-      {modalOpen ? <LocalesModal /> : null}
+      <LocalesModal />
     </>
   )
 }

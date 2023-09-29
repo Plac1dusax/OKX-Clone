@@ -44,7 +44,7 @@ export default function DropdownMenu(props) {
     case "common-group":
       dropdownMenu = (
         <div
-          className={`${styles["dropdown-menu-wrapper"]} ${styles["expandable-active"]} `}
+          className={`${styles["dropdown-menu-wrapper"]} ${styles["expandable-active"]} ${styles["common"]}`}
         >
           {dropdownContent.map((content) => {
             return (

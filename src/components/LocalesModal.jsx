@@ -40,7 +40,11 @@ export default function LocalesModal() {
   }
 
   return (
-    <div className={styles["modal-wrapper"]}>
+    <div
+      className={
+        modalOpen ? styles["modal-wrapper-active"] : styles["modal-wrapper"]
+      }
+    >
       <div className={styles["modal-header"]}>
         <div className={styles["section-buttons"]}>
           <div

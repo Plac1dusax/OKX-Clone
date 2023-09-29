@@ -1,4 +1,5 @@
-.modal-wrapper {
+.modal-wrapper,
+.modal-wrapper-active {
   width: 600px;
   height: 386px;
 
@@ -15,8 +16,17 @@
   border-radius: 6px;
 
   background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 200ms;
 
   z-index: 999999;
+}
+
+.modal-wrapper-active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-wrapper::-webkit-scrollbar {
@@ -79,7 +89,7 @@
 
   color: #929292;
 
-  cursor:pointer;
+  cursor: pointer;
 
   margin-right: 16px;
 }
@@ -127,4 +137,37 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+}
+
+@media all and (max-width: 435px) {
+  .modal-wrapper,
+  .modal-wrapper-active {
+    width: 100%;
+    height: 800px;
+
+    transition: bottom 200ms;
+    bottom: -9999px;
+  }
+
+  .modal-wrapper-active {
+    bottom: 0;
+  }
+
+  .modal-header {
+    position: sticky;
+    top: 0;
+
+    background-color: #fff;
+    z-index: 1000;
+  }
+
+  .modal-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .info-text {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }
