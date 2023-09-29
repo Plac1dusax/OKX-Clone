@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io"
 import styles from "../styles/componentStyles/footerListSmallScreen.module.css"
 
 export default function FooterListSmallScreen({ header, list }) {
-  const [footerActive, setFooterActive] = useState(true)
+  const [footerActive, setFooterActive] = useState(false)
 
   function handleFooterClick() {
     setFooterActive(!footerActive)

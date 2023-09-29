@@ -18,7 +18,7 @@
 
 .footer-list-header {
   height: 52px;
-
+  line-height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,15 @@
 
   height: 44px;
 
+  display: flex;
+  align-items: center;
+
   color: #909090;
 
   font-size: 14px;
+  line-height: 14px;
+}
+
+.footer-items a:hover {
+  color: #fafafa;
 }

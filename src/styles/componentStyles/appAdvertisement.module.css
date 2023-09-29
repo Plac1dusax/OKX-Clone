@@ -66,12 +66,50 @@
   }
 }
 
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1290px) {
   .application-images {
     aspect-ratio: auto 500 / 1084;
   }
 
   .application-information {
     margin-left: 102px;
+  }
+}
+
+@media all and (max-width: 435px) {
+  .app-advertisement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .application-information {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .application-section-buttons {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  .application-description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .app-advertisement-container {
+    padding: 0 8px;
+    padding-top: 20px;
+    padding-bottom: 86px;
+  }
+
+  .application-images {
+    width: 255px;
+    height: 553px;
+
+    margin-top: 60px;
   }
 }

@@ -11,3 +11,9 @@
 
   z-index: 1000;
 }
+
+@media all and (max-width: 435px) {
+  .navigation-container {
+    display: none;
+  }
+}

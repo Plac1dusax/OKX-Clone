@@ -73,7 +73,11 @@ export default function SideMenuItem(props) {
         <li className={`${styles["menu-item"]} ${styles["build-list"]}`}>
           <div
             onClick={handleBuildListClick}
-            className={styles["menu-item-header"]}
+            className={
+              buildList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />
@@ -87,7 +91,13 @@ export default function SideMenuItem(props) {
                       className={styles["build-list-inside"]}
                       onClick={handleOKBListClick}
                     >
-                      <div className={styles["menu-item-header"]}>
+                      <div
+                        className={
+                          oKBlist
+                            ? styles["menu-item-header-active"]
+                            : styles["menu-item-header"]
+                        }
+                      >
                         <div>{content.commonGroupHeader}</div>
                         <IoIosArrowDown />
                       </div>
@@ -112,7 +122,13 @@ export default function SideMenuItem(props) {
                       className={styles["build-list-inside"]}
                       onClick={handleOKTListClick}
                     >
-                      <div className={styles["menu-item-header"]}>
+                      <div
+                        className={
+                          oKTList
+                            ? styles["menu-item-header-active"]
+                            : styles["menu-item-header"]
+                        }
+                      >
                         <div>{content.commonGroupHeader}</div>
                         <IoIosArrowDown />
                       </div>
@@ -144,7 +160,11 @@ export default function SideMenuItem(props) {
         <li className={`${styles["menu-item"]} ${styles["more-list"]}`}>
           <div
             onClick={handleMoreListClick}
-            className={styles["menu-item-header"]}
+            className={
+              moreList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />
@@ -171,7 +191,11 @@ export default function SideMenuItem(props) {
         <li className={`${styles["menu-item"]} ${styles["buy-crypto-list"]}`}>
           <div
             onClick={handleBuyCryptoListClick}
-            className={styles["menu-item-header"]}
+            className={
+              buyCryptoList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />
@@ -196,7 +220,11 @@ export default function SideMenuItem(props) {
         <li className={`${styles["menu-item"]} ${styles["discover-list"]}`}>
           <div
             onClick={handleDiscoverListClick}
-            className={styles["menu-item-header"]}
+            className={
+              discoverList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />
@@ -221,7 +249,11 @@ export default function SideMenuItem(props) {
         <li className={`${styles["menu-item"]} ${styles["trade-list"]}`}>
           <div
             onClick={handleTradeListClick}
-            className={styles["menu-item-header"]}
+            className={
+              tradeList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />
@@ -246,7 +278,11 @@ export default function SideMenuItem(props) {
         <li className={`${styles["menu-item"]} ${styles["grow-list"]}`}>
           <div
             onClick={handleGrowListClick}
-            className={styles["menu-item-header"]}
+            className={
+              growList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />
@@ -273,7 +309,11 @@ export default function SideMenuItem(props) {
         >
           <div
             onClick={handleInstitutionalListClick}
-            className={styles["menu-item-header"]}
+            className={
+              institutionalList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />
@@ -300,7 +340,11 @@ export default function SideMenuItem(props) {
         >
           <div
             onClick={handleSupportListClick}
-            className={styles["menu-item-header"]}
+            className={
+              supportList
+                ? styles["menu-item-header-active"]
+                : styles["menu-item-header"]
+            }
           >
             <div>{header}</div>
             <IoIosArrowDown />

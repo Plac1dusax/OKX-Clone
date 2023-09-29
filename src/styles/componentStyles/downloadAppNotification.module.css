@@ -1,0 +1,51 @@
+.notification-container {
+  width: 408.4px;
+  height: 64px;
+
+  padding: 16px 12px;
+
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #f7f7f7;
+  backdrop-filter: blur(2px);
+}
+
+.application-logo {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+}
+
+.notification-wrapper {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.notification-headers {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-main {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+
+  color: #000;
+}
+
+.header {
+  color: #6e6e6e;
+  font-size: 12px;
+  font-weight: 400;
+}

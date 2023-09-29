@@ -77,6 +77,15 @@ export default function Button(props) {
         </button>
       )
       break
+    case "download-app":
+      button = (
+        <button
+          className={`${styles["button"]} ${styles["download-app-button"]} ${styles[specialClass]}`}
+        >
+          {content}
+        </button>
+      )
+      break
   }
 
   return button

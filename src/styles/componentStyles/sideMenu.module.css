@@ -19,6 +19,9 @@
 
 .menu-items-list {
   padding-left: 0;
+
+  position: relative;
+  width: 100%;
 }
 
 .side-menu-container::-webkit-scrollbar {
@@ -95,5 +98,16 @@
 @media all and (max-width: 750px) {
   .side-menu-container {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 435px) {
+  .side-menu-container {
+    padding: 0 20px;
+    padding-bottom: 48px;
+  }
+
+  .close-button {
+    padding-right: 0;
   }
 }

@@ -19,6 +19,7 @@ import { BsLinkedin } from "react-icons/bs"
 import { FaYoutube } from "react-icons/fa"
 import { BsThreeDots } from "react-icons/bs"
 import FooterListSmallScreen from "@/components/FooterListSmallScreen"
+import DownloadAppNotification from "@/components/DowloadAppNotification"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
@@ -341,6 +342,19 @@ export default function Home() {
             className={styles["main-section-video"]}
           />
         </div>
+        <div className={styles["sponsor-mobile"]}>
+          {sponsor.map((logo) => {
+            return (
+              <div
+                className={`${styles["sponsor-mobile-logo-container"]} ${
+                  styles[`logo-mobile-${logo.id}`]
+                }`}
+              >
+                <Image key={logo.id} src={logo.path} alt={logo.alt} fill />
+              </div>
+            )
+          })}
+        </div>
         <div className={styles["currencies-wrapper"]}>
           <div className={styles["currencies"]}>
             <a href="#">BTC $26,243.20 (+0.10%)</a>
@@ -385,22 +399,36 @@ export default function Home() {
         <AppAdvertisement />
       </div>
       <div className={`${styles["section"]} ${styles["evolution-section"]}`}>
-        <SectionHeader
-          header={"With you every step of the way"}
-          thinner={true}
-        />
-        <p className={styles["description-evolution"]}>
-          From your first crypto trade to your first NFT purchase, you'll have
-          us to guide you through the process. No stupid questions. No sleepless
-          nights. Have confidence in your crypto.
-        </p>
+        <div className={styles["evolution-headers"]}>
+          <SectionHeader
+            header={"With you every step of the way"}
+            thinner={true}
+          />
+          <p className={styles["description-evolution"]}>
+            From your first crypto trade to your first NFT purchase, you'll have
+            us to guide you through the process. No stupid questions. No
+            sleepless nights. Have confidence in your crypto.
+          </p>
+        </div>
+        <div className={styles["evolution-headers-mobile"]}>
+          <SectionHeader header={"A mode for everyone"} thinner={true} />
+          <p className={styles["description-evolution"]}>
+            Jump from trading, to DeFi, to NFTs all in one place.
+          </p>
+        </div>
         <div className={styles["evolution-section-video"]}>
           <video
             autoPlay
             loop
             muted
             src={"/videos/evolution.webm"}
-            className={styles["trade-video"]}
+            className={styles["evolution-video"]}
+          />
+          <Image
+            fill
+            src={"/videos/evolution-mini.gif"}
+            className={styles["evolution-mini-video"]}
+            alt={"Evolution gif"}
           />
         </div>
       </div>
@@ -652,6 +680,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <div className={styles["mobile-app-download"]}>
+        <DownloadAppNotification />
+      </div>
     </div>
   )
 }
