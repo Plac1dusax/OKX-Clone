@@ -105,12 +105,18 @@
 
   padding: 10px;
   margin-right: 6px;
-  cursor: pointer;
+
+  position: relative;
+
+  pointer-events: none;
 }
 
 .search svg {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+
+  pointer-events: auto;
 }
 
 .login,
