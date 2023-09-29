@@ -44,6 +44,12 @@ export default function SideMenu({
       <div onClick={handleSideMenuClose} className={styles["close-button"]}>
         <AiOutlineClose />
       </div>
+      <div className={styles["login-section"]}>
+        <a className={styles["sign-up"]}>Sign up</a>
+        <a className={styles["login"]} href="#">
+          Log in
+        </a>
+      </div>
       <div className={styles["mode-buttons"]}>
         <Button
           type={"mode"}
@@ -66,6 +72,11 @@ export default function SideMenu({
           return <SideMenuItem key={item.id} {...item} />
         })}
       </ul>
+      <Button
+        type={"side-bar"}
+        content={"Download OKX App"}
+        specialClass={"download-okx-app"}
+      />
     </div>
   ) : null
 }

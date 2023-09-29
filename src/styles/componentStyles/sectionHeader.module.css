@@ -8,4 +8,44 @@
 .thinner-header {
   font-size: 46px;
   font-weight: 500;
+
+  margin: 0;
+}
+
+@media all and (min-width: 1860px) {
+  .section-header {
+    font-size: 72px;
+    line-height: 80px;
+  }
+
+  .thinner-header {
+    font-size: 64px;
+    line-height: 84px;
+  }
+}
+
+@media all and (max-width: 1290px) {
+  .section-header {
+    font-size: 46px;
+  }
+
+  .thinner-header {
+    font-size: 46px;
+  }
+}
+
+@media all and (max-width: 435px) {
+  .section-header {
+    font-size: 32px;
+
+    line-height: 132%;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .thinner-header {
+    font-size: 28px;
+    line-height: 36.96px;
+    text-align: center;
+  }
 }

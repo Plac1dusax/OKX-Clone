@@ -262,7 +262,7 @@
   height: 20px;
 }
 
-@media all and (min-width: 1600px) {
+@media all and (min-width: 1500px) {
   .search {
     display: none;
   }
@@ -272,30 +272,70 @@
   }
 }
 
-@media all and (max-width: 1400px) {
-  .hamburger-menu {
-    display: inline-flex;
-  }
-
-  .search {
-    display: none;
-  }
-
-  .login-section {
-    display: none;
-  }
-
-  .header-split-right {
+@media all and (max-width: 1290px) {
+  .search-input {
     display: none;
   }
 
   .options {
     display: none;
   }
+
+  .hamburger-menu {
+    display: inline-flex;
+  }
 }
 
-@media all and (max-width: 1599px) {
-  .search-input {
+@media all and (max-width: 435px) {
+  .header-container {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+
+    padding: 0 16px;
+  }
+
+  .company-logo-and-mode {
+    justify-content: flex-start;
+  }
+
+  .mode-buttons {
     display: none;
+  }
+
+  .header-split {
+    display: none;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: inline-flex;
+
+    padding: 14px 0;
+  }
+
+  .search {
+    display: inline-flex;
+    padding: 0 10px;
+    margin-right: 10px;
+  }
+
+  .login-section {
+    width: fit-content;
+  }
+
+  .sign-up {
+    margin-right: 20px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    padding: 8px 6px;
+
+    width: 66.4px;
+    height: 27.6px;
   }
 }

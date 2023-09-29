@@ -60,6 +60,7 @@ export default function DropdownMenu(props) {
                         icon={item.icon}
                         primaryHeader={item.primaryHeader}
                         secondaryHeader={item.secondaryHeader}
+                        wideSecondary={item?.wideSecondary}
                         isExpandable={item.isExpandable}
                         expandableContent={item.expandableContent}
                       />
@@ -92,6 +93,7 @@ export default function DropdownMenu(props) {
                         primaryHeader={item.primaryHeader}
                         secondaryHeader={item.secondaryHeader}
                         isSeparate={true}
+                        wideSecondary={content.wideSecondary}
                       />
                     )
                   })}
@@ -118,6 +120,7 @@ export default function DropdownMenu(props) {
                   isExpandable={false}
                   primaryHeader={content.primaryHeader}
                   secondaryHeader={content.secondaryHeader}
+                  wideSecondary={content.wideSecondary}
                 />
               )
             })}
@@ -196,6 +199,7 @@ export default function DropdownMenu(props) {
                   primaryHeader={content.primaryHeader}
                   secondaryHeader={content.secondaryHeader}
                   list={content.list}
+                  wideSecondary={content.wideSecondary}
                 />
               )
             })}

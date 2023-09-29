@@ -18,6 +18,8 @@ import { ImFacebook2 } from "react-icons/im"
 import { BsLinkedin } from "react-icons/bs"
 import { FaYoutube } from "react-icons/fa"
 import { BsThreeDots } from "react-icons/bs"
+import FooterListSmallScreen from "@/components/FooterListSmallScreen"
+import DownloadAppNotification from "@/components/DowloadAppNotification"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
@@ -299,7 +301,9 @@ export default function Home() {
       <div className={`${styles["section"]} ${styles["main-section"]}`}>
         <div className={styles["header-and-sponsor"]}>
           <SectionHeader
-            header={"Faster, better, linker than your average crypto exchange"}
+            header={
+              "Faster, better, stronger than your average crypto exchange"
+            }
           />
           <div className={styles["input-area"]}>
             <div className={styles["input-wrapper"]}>
@@ -337,6 +341,19 @@ export default function Home() {
             src={"/videos/main-section.mp4"}
             className={styles["main-section-video"]}
           />
+        </div>
+        <div className={styles["sponsor-mobile"]}>
+          {sponsor.map((logo) => {
+            return (
+              <div
+                className={`${styles["sponsor-mobile-logo-container"]} ${
+                  styles[`logo-mobile-${logo.id}`]
+                }`}
+              >
+                <Image key={logo.id} src={logo.path} alt={logo.alt} fill />
+              </div>
+            )
+          })}
         </div>
         <div className={styles["currencies-wrapper"]}>
           <div className={styles["currencies"]}>
@@ -382,40 +399,56 @@ export default function Home() {
         <AppAdvertisement />
       </div>
       <div className={`${styles["section"]} ${styles["evolution-section"]}`}>
-        <SectionHeader
-          header={"With you every step of the way"}
-          thinner={true}
-        />
-        <p className={styles["description-evolution"]}>
-          From your first crypto trade to your first NFT purchase, you'll have
-          us to guide you through the process. No stupid questions. No sleepless
-          nights. Have confidence in your crypto.
-        </p>
-        <div className={styles["trade-section-video"]}>
+        <div className={styles["evolution-headers"]}>
+          <SectionHeader
+            header={"With you every step of the way"}
+            thinner={true}
+          />
+          <p className={styles["description-evolution"]}>
+            From your first crypto trade to your first NFT purchase, you'll have
+            us to guide you through the process. No stupid questions. No
+            sleepless nights. Have confidence in your crypto.
+          </p>
+        </div>
+        <div className={styles["evolution-headers-mobile"]}>
+          <SectionHeader header={"A mode for everyone"} thinner={true} />
+          <p className={styles["description-evolution"]}>
+            Jump from trading, to DeFi, to NFTs all in one place.
+          </p>
+        </div>
+        <div className={styles["evolution-section-video"]}>
           <video
             autoPlay
             loop
             muted
             src={"/videos/evolution.webm"}
-            className={styles["trade-video"]}
+            className={styles["evolution-video"]}
+          />
+          <Image
+            fill
+            src={"/videos/evolution-mini.gif"}
+            className={styles["evolution-mini-video"]}
+            alt={"Evolution gif"}
           />
         </div>
       </div>
       <div className={`${styles["section"]} ${styles["about-section"]}`}>
         <div className={styles["about-section-text-content"]}>
-          <div className={styles["about-section-headers"]}>
+          <div className={styles["about-section-headers-and-button"]}>
             <SectionHeader header={"What is OKX?"} thinner={true} />
             <p className={styles["about-description"]}>
               Find out why we’re your new favorite crypto app with some help
               from our world-class partners
             </p>
+            <div className={styles["about-button"]}>
+              <Button
+                type={"about-section"}
+                content={"Find out"}
+                specialClass={"about-section-button"}
+              />
+            </div>
           </div>
-          <div className={styles["about-button-and-logo"]}>
-            <Button
-              type={"about-section"}
-              content={"Find out"}
-              specialClass={"about-section-button"}
-            />
+          <div className={styles["about-logo"]}>
             <div className={styles["company-logo-wide-wrapper"]}>
               <Image
                 src={"/images/companyLogos/company-logo-wide.webp"}
@@ -601,8 +634,55 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className={styles["footer-list-small-screen"]}>
+            <div className={styles["small-footer-list"]}>
+              <FooterListSmallScreen
+                header={aboutOKXFooter.header}
+                list={aboutOKXFooter.listArray}
+              />
+            </div>
+            <div className={styles["small-footer-list"]}>
+              <FooterListSmallScreen
+                header={productsFooter.header}
+                list={productsFooter.listArray}
+              />
+            </div>
+            <div className={styles["small-footer-list"]}>
+              <FooterListSmallScreen
+                header={servicesFooter.header}
+                list={servicesFooter.listArray}
+              />
+            </div>
+            <div className={styles["small-footer-list"]}>
+              <FooterListSmallScreen
+                header={supportFooter.header}
+                list={supportFooter.listArray}
+              />
+            </div>
+            <div className={styles["small-footer-list"]}>
+              <FooterListSmallScreen
+                header={buyCryptoFooter.header}
+                list={buyCryptoFooter.listArray}
+              />
+            </div>
+            <div className={styles["small-footer-list"]}>
+              <FooterListSmallScreen
+                header={cryptoCalculatorFooter.header}
+                list={cryptoCalculatorFooter.listArray}
+              />
+            </div>
+            <div className={styles["small-footer-list"]}>
+              <FooterListSmallScreen
+                header={tradeFooter.header}
+                list={tradeFooter.listArray}
+              />
+            </div>
+          </div>
         </div>
       </footer>
+      <div className={styles["mobile-app-download"]}>
+        <DownloadAppNotification />
+      </div>
     </div>
   )
 }
