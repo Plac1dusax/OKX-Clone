@@ -21,7 +21,6 @@ import { BsThreeDots } from "react-icons/bs"
 import FooterListSmallScreen from "@/components/FooterListSmallScreen"
 import DownloadAppNotification from "@/components/DowloadAppNotification"
 import LocalesModal from "@/components/LocalesModal"
-import { LocalesContext } from "@/context/LocalesContext"
 import styles from "../styles/pageStyles/page.module.css"
 
 export default function Home() {
@@ -31,7 +30,7 @@ export default function Home() {
       question: <p>What products does OKX provide?</p>,
       answer: (
         <>
-          <p>
+          <p key={uuidv4()}>
             OKX is an innovative cryptocurrency exchange with advanced financial
             offerings. We offer cutting-edge crypto trading and earning services
             to millions of users globally in more than 180 regions.
@@ -40,56 +39,56 @@ export default function Home() {
         </>
       ),
       answerList: [
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Trade hundreds of tokens and trading pairs
           </a>{" "}
           on spot, margin and derivatives markets.
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Manage your DeFi portfolio
           </a>{" "}
           by connecting your Web3 wallet to organize all your decentralized
           assets in one place.
         </li>,
-        <li>
+        <li key={uuidv4()}>
           Create, buy and sell NFTs on our{" "}
           <a href="#" className={styles["link"]}>
             NFT Marketplace.
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           Discover top{" "}
           <a href="#" className={styles["link"]}>
             decentralized
           </a>{" "}
           applications, including DeFi and blockchain gaming DApps.
         </li>,
-        <li>
+        <li key={uuidv4()}>
           Connect to DeFi with our Web3 wallet via{" "}
           <a href="#" className={styles["link"]}>
             our App
           </a>{" "}
           or browser extension.
         </li>,
-        <li>
+        <li key={uuidv4()}>
           Earn crypto in our{" "}
-          <a href="#" className={styles["link"]}>
+          <a key={uuidv4()} href="#" className={styles["link"]}>
             mining pools
           </a>
           , take out{" "}
-          <a href="#" className={styles["link"]}>
+          <a key={uuidv4()} href="#" className={styles["link"]}>
             crypto collateralized loans
           </a>
           , and discover other ways to{" "}
-          <a href="#" className={styles["link"]}>
+          <a key={uuidv4()} href="#" className={styles["link"]}>
             grow your crypto with OKX Earn.
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           Connect to the world-famous{" "}
-          <a href="#" className={styles["link"]}>
+          <a key={uuidv4()} href="#" className={styles["link"]}>
             TradingView Platform
           </a>{" "}
           and trade crypto directly with their supercharged charts.
@@ -100,15 +99,15 @@ export default function Home() {
       id: uuidv4(),
       question: <p>How do I buy Bitcoin on OKX?</p>,
       answer: (
-        <p>
+        <p key={uuidv4()}>
           Easily{" "}
-          <a href="#" className={styles["link"]}>
+          <a key={uuidv4()} href="#" className={styles["link"]}>
             buy Bitcoin
           </a>{" "}
           within minutes with GBP, EUR, USD or your local currency. OKX supports
           various popular payment methods, including Visa, Mastercard, and
           ApplePay credit cards.To get started, check out our{" "}
-          <a href="#" className={styles["link"]}>
+          <a key={uuidv4()} href="#" className={styles["link"]}>
             latest guide
           </a>{" "}
           on how to buy Bitcoin on OKX. Want to buy, sell, or hold other coins
@@ -117,47 +116,47 @@ export default function Home() {
         </p>
       ),
       answerList: [
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy BTC
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy USDT
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy ETH
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy DOT
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy SOL
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy Doge
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy XRP
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy OKB
           </a>
         </li>,
-        <li>
+        <li key={uuidv4()}>
           <a href="#" className={styles["link"]}>
             Buy BCH
           </a>
@@ -181,7 +180,7 @@ export default function Home() {
       question: <p>Can U.S. citizens use OKX?</p>,
       answer: (
         <>
-          <p>
+          <p key={uuidv4()}>
             OKX is not able to serve customers in the United States. Our
             platform is available globally, except in the following
             jurisdictions: the United States, Singapore, Cuba, Iran, North
@@ -190,7 +189,7 @@ export default function Home() {
             users), Bangladesh, Bolivia, Malta, and Hong Kong (specifically
             regarding our derivatives-related services for retail users).
           </p>
-          <p>
+          <p key={uuidv4()}>
             View our <a className={styles["strong"]}>terms of service</a> for
             the full details.
           </p>
@@ -411,9 +410,9 @@ export default function Home() {
               thinner={true}
             />
             <p className={styles["description-evolution"]}>
-              From your first crypto trade to your first NFT purchase, you'll
-              have us to guide you through the process. No stupid questions. No
-              sleepless nights. Have confidence in your crypto.
+              From your first crypto trade to your first NFT purchase,
+              you&apos;ll have us to guide you through the process. No stupid
+              questions. No sleepless nights. Have confidence in your crypto.
             </p>
           </div>
           <div className={styles["evolution-headers-mobile"]}>
@@ -469,7 +468,7 @@ export default function Home() {
               <div className={styles["video-information"]}>
                 <p className={styles["main"]}>Coach Pep Guardiola</p>
                 <p className={styles["secondary"]}>
-                  Explains "crazy football formation"
+                  Explains &ldquo;crazy football formation&rdquo;
                 </p>
               </div>
               <video

@@ -80,7 +80,7 @@ export default function LocalesModal() {
             </div>
             <div className={styles["info-text"]}>
               Your language selection applies to OKX emails, in-app
-              notifications and all devices you're logged in to
+              notifications, and all devices you&apos;re logged in to
             </div>
           </div>
         ) : null}
