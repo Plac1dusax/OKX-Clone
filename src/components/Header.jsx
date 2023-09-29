@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import Navigation from "./Navigation"
 import { BiSearchAlt2 } from "react-icons/bi"
@@ -56,10 +56,12 @@ import { AiTwotoneSecurityScan } from "react-icons/ai"
 import { GrStatusGood } from "react-icons/gr"
 import { VscReferences } from "react-icons/vsc"
 import { GrOverview } from "react-icons/gr"
+import SearchBarDropdownMenu from "./SearchBarDropdownMenu"
 import styles from "../styles/componentStyles/header.module.css"
 
 export default function Header() {
   const [sideMenuOpen, setSideMenuOpen] = useState(false)
+  const [searchBarDropdownOpen, setSearchBarDropdownOpen] = useState(false)
 
   const navigationItems = [
     {
@@ -471,6 +473,12 @@ export default function Header() {
     setSideMenuOpen(true)
   }
 
+  function handleSearchBarDropdownClick(e) {
+    if (e.target.matches("svg")) {
+      setSearchBarDropdownOpen(!searchBarDropdownOpen)
+    }
+  }
+
   return (
     <>
       <header className={styles["header-container"]}>
@@ -505,8 +513,15 @@ export default function Header() {
           <Navigation navigationItems={navigationItems} />
         </div>
         <div className={styles["user-section"]}>
-          <div className={styles["search"]}>
+          <div
+            onClick={handleSearchBarDropdownClick}
+            className={styles["search"]}
+          >
             <BiSearchAlt2 />
+            <SearchBarDropdownMenu
+              searchBarDropdownOpen={searchBarDropdownOpen}
+              setSearchBarDropdownOpen={setSearchBarDropdownOpen}
+            />
           </div>
           <div className={styles["search-input"]}>
             <input type="text" placeholder="Search crypto, products" />

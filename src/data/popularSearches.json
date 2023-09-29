@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "rating": 1,
+    "hot": true,
+    "name": "TRB/USDT",
+    "value": "51.658",
+    "change": "-1.26%",
+    "positive": false,
+    "color": "#535c19"
+  },
+  {
+    "id": 2,
+    "rating": 2,
+    "hot": true,
+    "name": "COMP/USDT",
+    "value": "48.72",
+    "change": "-1.36%",
+    "positive": false,
+    "color": "#657772"
+  },
+  {
+    "id": 3,
+    "rating": 3,
+    "hot": true,
+    "name": "ETH/USDT",
+    "value": "1,655.22",
+    "change": "+0.14%",
+    "positive": true,
+    "color": "#a549e9"
+  },
+  {
+    "id": 4,
+    "rating": 4,
+    "hot": false,
+    "name": "WLD/USDT",
+    "value": "1.8326",
+    "change": "+2.38%",
+    "positive": true,
+    "color": "#61aed1"
+  },
+  {
+    "id": 5,
+    "rating": 5,
+    "hot": false,
+    "name": "BICO/USDT",
+    "value": "0.2507",
+    "change": "-2.60%",
+    "positive": false,
+    "color": "#6b700b"
+  },
+  {
+    "id": 6,
+    "rating": 6,
+    "hot": false,
+    "name": "LUNA/USDT",
+    "value": "0.5094",
+    "change": "-3.71%",
+    "positive": false,
+    "color": "#32e64f"
+  },
+  {
+    "id": 7,
+    "rating": 7,
+    "hot": false,
+    "name": "BCH/USDT",
+    "value": "236.65",
+    "change": "-0.88%",
+    "positive": false,
+    "color": "#da6814"
+  },
+  {
+    "id": 8,
+    "rating": 8,
+    "hot": false,
+    "name": "APE/USDT",
+    "value": "1.2620",
+    "change": "+4.88%",
+    "positive": true,
+    "color": "#b9561a"
+  },
+  {
+    "id": 9,
+    "rating": 9,
+    "hot": false,
+    "name": "GFT/USDT",
+    "value": "0.030514",
+    "change": "+6.00%",
+    "positive": true,
+    "color": "#ef6206"
+  },
+  {
+    "id": 10,
+    "rating": 10,
+    "hot": false,
+    "name": "BTC/USDT",
+    "value": "26,972.0",
+    "change": "-0.19%",
+    "positive": false,
+    "color": "#836287"
+  },
+  {
+    "id": 11,
+    "rating": 11,
+    "hot": false,
+    "name": "MKR/USDT",
+    "value": "1,550.9",
+    "change": "+2.63%",
+    "positive": true,
+    "color": "#41ddfc"
+  },
+  {
+    "id": 12,
+    "rating": 12,
+    "hot": false,
+    "name": "OP/USDT",
+    "value": "1.3329",
+    "change": "+0.64%",
+    "positive": true,
+    "color": "#6c0031"
+  },
+  {
+    "id": 13,
+    "rating": 13,
+    "hot": false,
+    "name": "DOGE/USDT",
+    "value": "0.6161",
+    "change": "+0.20%",
+    "positive": true,
+    "color": "#997946"
+  },
+  {
+    "id": 14,
+    "rating": 14,
+    "hot": false,
+    "name": "LINK/USDT",
+    "value": "7.756",
+    "change": "-0.68",
+    "positive": false,
+    "color": "#866acd"
+  },
+  {
+    "id": 15,
+    "rating": 15,
+    "hot": false,
+    "name": "FIL/USDT",
+    "value": "3.303",
+    "change": "-0.27%",
+    "positive": false,
+    "color": "#ce5e1c"
+  },
+  {
+    "id": 16,
+    "rating": 16,
+    "hot": false,
+    "name": "ARB/USDT",
+    "value": "0.8990",
+    "change": "+0.69%",
+    "positive": true,
+    "color": "#affb59"
+  },
+  {
+    "id": 17,
+    "rating": 17,
+    "hot": false,
+    "name": "CORE/USDT",
+    "value": "0.41090",
+    "change": "-2.29%",
+    "positive": false,
+    "color": "#855e8b"
+  },
+  {
+    "id": 18,
+    "rating": 18,
+    "hot": false,
+    "name": "PEPE/USDT",
+    "value": "0.0000008104",
+    "change": "+10.44%",
+    "positive": true,
+    "color": "#1d29f7"
+  },
+  {
+    "id": 19,
+    "rating": 19,
+    "hot": false,
+    "name": "AGLD/USDT",
+    "value": "0.6405",
+    "change": "+1.49%",
+    "positive": true,
+    "color": "#824869"
+  },
+  {
+    "id": 20,
+    "rating": 20,
+    "hot": false,
+    "name": "FITF/USDT",
+    "value": "0.005017",
+    "change": "-0.04%",
+    "positive": false,
+    "color": "#fcf137"
+  }
+]
