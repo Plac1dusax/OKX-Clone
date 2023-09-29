@@ -44,7 +44,7 @@ export default function DropdownMenu(props) {
     case "common-group":
       dropdownMenu = (
         <div
-          className={`${styles["dropdown-menu-wrapper"]} ${styles["expandable-active"]} `}
+          className={`${styles["dropdown-menu-wrapper"]} ${styles["expandable-active"]} ${styles["common"]}`}
         >
           {dropdownContent.map((content) => {
             return (
@@ -180,7 +180,9 @@ export default function DropdownMenu(props) {
                 <div className={styles["icon-wrapper"]}>{contact.icon}</div>
               </a>
             ) : (
-              <a className={styles["contact-list-item"]}>{contact.header}</a>
+              <a key={uuidv4()} className={styles["contact-list-item"]}>
+                {contact.header}
+              </a>
             )
           })}
         </div>

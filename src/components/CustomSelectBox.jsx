@@ -1,17 +1,23 @@
 "use client"
 
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect, useContext } from "react"
 import locales from "../data/locales.json"
 import { TbWorldLongitude } from "react-icons/tb"
 import { IoIosArrowUp } from "react-icons/io"
+import { LocalesContext } from "@/context/LocalesContext"
 import styles from "../styles/componentStyles/customSelectBox.module.css"
 
 export default function CustomSelectBox() {
-  const [selectedLanguage, setSelectedLanguage] = useState("English")
-  const [selectedCurrency, setSelectedCurrency] = useState("USD")
   const [listActive, setListActive] = useState(false)
   const [checkViewPort, setCheckViewPort] = useState(false)
   const listRef = useRef(null)
+
+  const {
+    selectedLanguage,
+    setSelectedLanguage,
+    selectedCurrency,
+    setSelectedCurrency,
+  } = useContext(LocalesContext)
 
   const languageList = locales.filter((list) => list.listName === "language")
   const currencyList = locales.filter(
@@ -37,6 +43,7 @@ export default function CustomSelectBox() {
       const divCenter = rect.top + rect.height / 2
 
       setCheckViewPort(divCenter < windowHeight / 2)
+      console.log(divCenter < windowHeight / 2)
     }
   }
 

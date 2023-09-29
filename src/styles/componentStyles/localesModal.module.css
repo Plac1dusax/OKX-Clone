@@ -1,0 +1,173 @@
+.modal-wrapper,
+.modal-wrapper-active {
+  width: 600px;
+  height: 386px;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 6px;
+
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 200ms;
+
+  z-index: 999999;
+}
+
+.modal-wrapper-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-header {
+  width: 100%;
+  height: 46px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 12px;
+}
+
+.section-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+
+  border-bottom: 0.8px solid #ebebeb;
+
+  padding-left: 20px;
+}
+
+.section-button,
+.section-button-selected {
+  width: 64px;
+  height: 42px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  color: #000;
+
+  display: flex;
+  align-items: center;
+}
+
+.section-button-selected {
+  border-bottom: 1.6px solid #000;
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  color: #929292;
+
+  cursor: pointer;
+
+  margin-right: 16px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+
+  padding: 24px;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  padding: 8px 16px;
+
+  margin: 8px 0;
+
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #000;
+}
+
+.info-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+@media all and (max-width: 435px) {
+  .modal-wrapper,
+  .modal-wrapper-active {
+    width: 100%;
+    height: 800px;
+
+    transition: bottom 200ms;
+    bottom: -9999px;
+  }
+
+  .modal-wrapper-active {
+    bottom: 0;
+  }
+
+  .modal-header {
+    position: sticky;
+    top: 0;
+
+    background-color: #fff;
+    z-index: 1000;
+  }
+
+  .modal-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .info-text {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

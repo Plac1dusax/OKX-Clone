@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { IoIosArrowDown } from "react-icons/io"
+import { LocalesContext } from "@/context/LocalesContext"
 import styles from "../styles/componentStyles/sideMenuItem.module.css"
 
 export default function SideMenuItem(props) {
@@ -15,6 +16,9 @@ export default function SideMenuItem(props) {
   const [oKTList, setOKTList] = useState(false)
   const [moreList, setMoreList] = useState(false)
   const [supportList, setSupportList] = useState(false)
+
+  const { selectedLanguage, selectedCurrency, setModalOpen } =
+    useContext(LocalesContext)
 
   let menuItem
 
@@ -58,6 +62,10 @@ export default function SideMenuItem(props) {
     setSupportList(!supportList)
   }
 
+  function handleLocalesModal() {
+    setModalOpen(true)
+  }
+
   switch (header.toLowerCase()) {
     case "learn":
       menuItem = (
@@ -85,9 +93,10 @@ export default function SideMenuItem(props) {
           {buildList ? (
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
-                dropdownContent.map((content) => {
+                dropdownContent.map((content, index) => {
                   return content.commonGroupHeader === "OKB Chain" ? (
                     <li
+                      key={index}
                       className={styles["build-list-inside"]}
                       onClick={handleOKBListClick}
                     >
@@ -173,9 +182,13 @@ export default function SideMenuItem(props) {
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
                 dropdownContent.map((content) => {
-                  return content.items.map((item) => {
+                  return content.items.map((item, index) => {
                     return (
-                      <a href="#" className={styles["menu-item-link"]}>
+                      <a
+                        key={index}
+                        href="#"
+                        className={styles["menu-item-link"]}
+                      >
                         {item.primaryHeader}
                       </a>
                     )
@@ -203,9 +216,13 @@ export default function SideMenuItem(props) {
           {buyCryptoList ? (
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
-                dropdownContent.map((content) => {
+                dropdownContent.map((content, index) => {
                   return (
-                    <a href="#" className={styles["menu-item-link"]}>
+                    <a
+                      key={index}
+                      href="#"
+                      className={styles["menu-item-link"]}
+                    >
                       {content.primaryHeader}
                     </a>
                   )
@@ -232,9 +249,13 @@ export default function SideMenuItem(props) {
           {discoverList ? (
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
-                dropdownContent.map((content) => {
+                dropdownContent.map((content, index) => {
                   return (
-                    <a href="#" className={styles["menu-item-link"]}>
+                    <a
+                      key={index}
+                      href="#"
+                      className={styles["menu-item-link"]}
+                    >
                       {content.primaryHeader}
                     </a>
                   )
@@ -261,9 +282,13 @@ export default function SideMenuItem(props) {
           {tradeList ? (
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
-                dropdownContent.map((content) => {
+                dropdownContent.map((content, index) => {
                   return (
-                    <a href="#" className={styles["menu-item-link"]}>
+                    <a
+                      key={index}
+                      href="#"
+                      className={styles["menu-item-link"]}
+                    >
                       {content.primaryHeader}
                     </a>
                   )
@@ -290,9 +315,13 @@ export default function SideMenuItem(props) {
           {growList ? (
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
-                dropdownContent.map((content) => {
+                dropdownContent.map((content, index) => {
                   return (
-                    <a href="#" className={styles["menu-item-link"]}>
+                    <a
+                      key={index}
+                      href="#"
+                      className={styles["menu-item-link"]}
+                    >
                       {content.primaryHeader}
                     </a>
                   )
@@ -321,9 +350,13 @@ export default function SideMenuItem(props) {
           {institutionalList ? (
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
-                dropdownContent.map((content) => {
+                dropdownContent.map((content, index) => {
                   return (
-                    <a href="#" className={styles["menu-item-link"]}>
+                    <a
+                      key={index}
+                      href="#"
+                      className={styles["menu-item-link"]}
+                    >
                       {content.primaryHeader}
                     </a>
                   )
@@ -352,9 +385,13 @@ export default function SideMenuItem(props) {
           {supportList ? (
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
-                dropdownContent.map((content) => {
+                dropdownContent.map((content, index) => {
                   return (
-                    <a href="#" className={styles["menu-item-link"]}>
+                    <a
+                      key={index}
+                      href="#"
+                      className={styles["menu-item-link"]}
+                    >
                       {content.primaryHeader}
                     </a>
                   )
@@ -368,10 +405,11 @@ export default function SideMenuItem(props) {
     case "english/usd":
       menuItem = (
         <li
+          onClick={handleLocalesModal}
           className={`${styles["menu-item"]} ${styles["menu-item-visible"]} ${styles["language-list"]}`}
         >
           <div className={styles["menu-item-header"]}>
-            <div>{header}</div>
+            <div>{`${selectedLanguage}/${selectedCurrency}`}</div>
           </div>
         </li>
       )
