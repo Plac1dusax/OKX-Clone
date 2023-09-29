@@ -6,8 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  gap: 100px;
 }
 
 .application-images {
@@ -50,4 +48,30 @@
   width: 100%;
 
   color: #fff;
+}
+
+@media all and (min-width: 1860px) {
+  .application-information {
+    max-width: 686px;
+    margin-left: 12%;
+  }
+
+  .application-images {
+    width: 323px;
+    height: 700px;
+  }
+
+  .application-description {
+    font-size: 24px;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .application-images {
+    aspect-ratio: auto 500 / 1084;
+  }
+
+  .application-information {
+    margin-left: 102px;
+  }
 }

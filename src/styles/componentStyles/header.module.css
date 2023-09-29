@@ -262,7 +262,7 @@
   height: 20px;
 }
 
-@media all and (min-width: 1600px) {
+@media all and (min-width: 1500px) {
   .search {
     display: none;
   }
@@ -272,30 +272,16 @@
   }
 }
 
-@media all and (max-width: 1400px) {
-  .hamburger-menu {
-    display: inline-flex;
-  }
-
-  .search {
-    display: none;
-  }
-
-  .login-section {
-    display: none;
-  }
-
-  .header-split-right {
+@media all and (max-width: 1280px) {
+  .search-input {
     display: none;
   }
 
   .options {
     display: none;
   }
-}
 
-@media all and (max-width: 1599px) {
-  .search-input {
-    display: none;
+  .hamburger-menu {
+    display: inline-flex;
   }
 }

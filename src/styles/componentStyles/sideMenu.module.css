@@ -1,10 +1,9 @@
 .side-menu-container {
   background-color: var(--side-menu-background);
-  position: absolute;
+  position: fixed;
 
   width: 376px;
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
 
   right: 0;
   top: 0;
@@ -12,11 +11,53 @@
   overflow: hidden;
   overflow-y: auto;
 
+  padding: 0 24px;
+  padding-bottom: 48px;
+
   z-index: 999;
+}
+
+.menu-items-list {
+  padding-left: 0;
 }
 
 .side-menu-container::-webkit-scrollbar {
   display: none;
+}
+
+.login,
+.sign-up {
+  font-size: 14px;
+}
+
+.login-section {
+  width: 127px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 12px;
+}
+
+.login {
+  color: var(--login);
+  text-decoration: none;
+}
+
+.sign-up {
+  color: var(--sign-up);
+  border: 1px solid var(--sign-up);
+  border-radius: 14px;
+  height: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  padding: 6px 8px;
 }
 
 .close-button {
@@ -26,6 +67,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+  background-color: var(--side-menu-background);
 
   color: var(--side-menu-close);
 
@@ -39,7 +87,6 @@
   height: 72px;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
   gap: 14px;

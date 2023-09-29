@@ -309,7 +309,6 @@ export default function SideMenuItem(props) {
             <div className={styles["menu-item-links"]}>
               {dropdownContent &&
                 dropdownContent.map((content) => {
-                  console.log(content)
                   return (
                     <a href="#" className={styles["menu-item-link"]}>
                       {content.primaryHeader}

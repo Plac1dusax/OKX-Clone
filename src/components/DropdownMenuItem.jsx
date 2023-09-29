@@ -8,6 +8,7 @@ export default function DropdownMenuItem({
   isExpandable,
   primaryHeader,
   secondaryHeader,
+  wideSecondary,
   expandableContent,
   list,
 }) {
@@ -28,7 +29,10 @@ export default function DropdownMenuItem({
                 className={`${styles["headers"]} ${styles["headers-expandable"]}`}
               >
                 <div className={styles["header-primary"]}>{primaryHeader}</div>
-                <div className={styles["header-secondary"]}>
+                <div
+                  style={wideSecondary ? { whiteSpace: "normal" } : null}
+                  className={styles["header-secondary"]}
+                >
                   {secondaryHeader}
                 </div>
               </div>
@@ -45,7 +49,10 @@ export default function DropdownMenuItem({
           ) : (
             <div className={styles["headers"]}>
               <div className={styles["header-primary"]}>{primaryHeader}</div>
-              <div className={styles["header-secondary"]}>
+              <div
+                style={wideSecondary ? { whiteSpace: "normal" } : null}
+                className={styles["header-secondary"]}
+              >
                 {secondaryHeader}
               </div>
             </div>

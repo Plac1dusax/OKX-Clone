@@ -148,6 +148,7 @@ export default function Header() {
           icon: <SiCoinmarketcap />,
 
           primaryHeader: "Liquid Marketplace",
+          wideSecondary: true,
           secondaryHeader:
             "Deep liquidity on futures spreads, custom multi-leg strategies, and block trades",
         },
@@ -389,6 +390,7 @@ export default function Header() {
         {
           icon: <MdAccountTree />,
           primaryHeader: "Managed Trading Sub-accounts",
+          wideSecondary: true,
           secondaryHeader:
             "Manage sub-accounts, trade easily and safely with more profits​",
         },

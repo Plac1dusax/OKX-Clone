@@ -68,6 +68,15 @@ export default function Button(props) {
         </button>
       )
       break
+    case "side-bar":
+      button = (
+        <button
+          className={`${styles["button"]} ${styles["side-bar-button"]} ${styles[specialClass]}`}
+        >
+          {content}
+        </button>
+      )
+      break
   }
 
   return button
